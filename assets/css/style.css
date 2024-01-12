@@ -1658,3 +1658,8 @@ h6 {
   font-size: 13px;
   color: #ddd;
 }
+
+#map img {
+  max-width: 100%;
+  height: auto;
+}
