@@ -1141,8 +1141,8 @@ h6 {
 
 @media (max-width: 992px) {
   .clubicon {
-    max-height: 90%;
-    width: auto;
+    max-height: auto;
+    max-width: 70%;
   }
 }
 
