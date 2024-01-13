@@ -1102,18 +1102,23 @@ h6 {
 
 #clubs .hotel-img {
   overflow: hidden;
-  margin-bottom: 15px;
 }
 
 #clubs .hotel-img img {
   transition: 0.3s ease-in-out;
 }
 
+#clubs .clubicon {
+  border: 1px solid #e0e5fa;
+  background: #fff;
+  height: auto;
+  width: auto;
+}
+
 #clubs h3 {
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 5px;
-  padding: 0 20px;
 }
 
 #clubs a {
@@ -1124,17 +1129,7 @@ h6 {
   color: #f82249;
 }
 
-#clubs .stars {
-  padding: 0 20px;
-  margin-bottom: 5px;
-}
-
-#clubs .stars i {
-  color: rgb(255, 195, 29);
-}
-
 #clubs p {
-  padding: 0 20px;
   margin-bottom: 20px;
   color: #060c22;
   font-style: italic;
