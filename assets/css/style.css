@@ -1086,6 +1086,7 @@ h6 {
 /*--------------------------------------------------------------
 # Hotels Section
 --------------------------------------------------------------*/
+
 #clubs {
   padding: 60px 0;
 }
@@ -1131,9 +1132,18 @@ h6 {
 
 #clubs p {
   margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   color: #060c22;
   font-style: italic;
   font-size: 15px;
+}
+
+@media (max-width: 992px) {
+  .clubicon {
+    max-height: 100%;
+    width: auto;
+  }
 }
 
 /*--------------------------------------------------------------
