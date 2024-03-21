@@ -1,0 +1,149 @@
+{
+  "Day 1 - Sunday 7th July": [
+    {
+      "time": "Arrival - 09:35",
+      "title": "Land at IBZ and collect rental cars",
+      "description": "After baggage claim Slands and Josh pick cars up from ClickRent. Rest of gang better off waiting at the airport as the mini-bus is small and the airport is air-conditioned. We'll swing back and collect you at a pre-arranged point once we've got it. Do not forget to pre-arrange a point (again). Half an hour for passport control and bags, maybe an hour for rental collection. Should be on the road by 11am."
+    },
+    {
+      "time": "16:00 check-in",
+      "title": "Villa keys & hunter-gathering",
+      "description": "Check in is at 4pm, ideally we ask and they let us check in at midday. Find our way to the villa, put our shit down, take a bit of a break, arrange some kind of supermarket trip and a trip for party supplies. Worst case we do all the other stuff first, then check in at 4pm."
+    }
+  ],
+  "Day 2 - Monday 8th July": [
+    {
+      "time": "23:30",
+      "title": "Eric Prydz presents [CELL]",
+      "location": "Hi Ibiza",
+      "description": "",
+      "image": "assets/img/clubs/Hi.png"
+    },
+    {
+      "time": "Late afternoon till early hours",
+      "title": "Circoloco",
+      "location": "DC10",
+      "description": "",
+      "image": "assets/img/clubs/dc10.png"
+    },
+    {
+      "time": "17:00 - 23:00",
+      "title": "David Guetta FUCK ME I'M FAMOUS",
+      "location": "Ushuaia",
+      "description": "",
+      "image": "assets/img/clubs/Ushuaia.jpeg"
+    }
+  ],
+  "Day 3 - Tuesday 9th July": [
+    {
+      "time": "23:00",
+      "title": "The Masquerade by Claptone",
+      "location": "Amnesia",
+      "description": "The masked House music maverick returns to the club where he debuted The Masquerade in 2018. A contemporary spin on the bal masqué tradition of Renaissance-era Venice and its ruling classes, The Masquerade guarantees intrigue, razzmatazz and a little kink on the Terraza.",
+      "image": "assets/img/clubs/amnesia.jpg"
+    },
+    {
+      "time": "23:59",
+      "title": "Camelphat",
+      "location": "Pacha",
+      "description": "Multi-platinum production duo and DJ double-act CAMELPHAT return to Ibiza and to Pacha in 2024, cementing the club with the cherries as their island home.",
+      "image": "assets/img/clubs/Hi.png"
+    }
+  ],
+  "Day 4 - Wednesday 10th July": [
+    {
+      "time": "10:00 AM",
+      "title": "Event 3",
+      "description": "Description of Event 3"
+    },
+    {
+      "time": "2:00 PM",
+      "title": "Event 4",
+      "description": "Description of Event 4"
+    }
+  ],
+  "Day 5 - Thursday 11th July": [
+    {
+      "time": "10:00 AM",
+      "title": "Event 3",
+      "description": "Description of Event 3"
+    },
+    {
+      "time": "2:00 PM",
+      "title": "Event 4",
+      "description": "Description of Event 4"
+    }
+  ],
+  "Day 6 - Friday 12th July": [
+    {
+      "time": "10:00 AM",
+      "title": "Event 3",
+      "description": "Description of Event 3"
+    },
+    {
+      "time": "2:00 PM",
+      "title": "Event 4",
+      "description": "Description of Event 4"
+    }
+  ],
+  "Day 7 - Saturday 13th July": [
+    {
+      "time": "10:00 AM",
+      "title": "Event 3",
+      "description": "Description of Event 3"
+    },
+    {
+      "time": "2:00 PM",
+      "title": "Event 4",
+      "description": "Description of Event 4"
+    }
+  ],
+  "Day 8 - Sunday 14th July": [
+    {
+      "time": "10:00 AM",
+      "title": "Event 3",
+      "description": "Description of Event 3"
+    },
+    {
+      "time": "2:00 PM",
+      "title": "Event 4",
+      "description": "Description of Event 4"
+    }
+  ],
+  "Day 9 - Monday 15th July": [
+    {
+      "time": "10:00 AM",
+      "title": "Event 3",
+      "description": "Description of Event 3"
+    },
+    {
+      "time": "2:00 PM",
+      "title": "Event 4",
+      "description": "Description of Event 4"
+    }
+  ],
+  "Day 10 - Tuesday 16th July": [
+    {
+      "time": "10:00 AM",
+      "title": "Event 3",
+      "description": "Description of Event 3"
+    },
+    {
+      "time": "2:00 PM",
+      "title": "Event 4",
+      "description": "Description of Event 4"
+    }
+  ],
+  "Day 11 - Wednesday 17th July": [
+    {
+      "time": "10:00 AM",
+      "title": "Event 3",
+      "description": "Description of Event 3"
+    },
+    {
+      "time": "2:00 PM",
+      "title": "Event 4",
+      "description": "Description of Event 4"
+    }
+  ]
+}
