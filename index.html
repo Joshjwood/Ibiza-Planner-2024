@@ -224,23 +224,26 @@
 
         // Generate buttons for each day
         days.forEach((day, index) => {
-            const button = document.createElement('button');
-            button.classList.add('nav-link', 'px-4', 'text-start');
-            button.setAttribute('id', `d${index + 1}-tab`);
-            button.setAttribute('data-bs-toggle', 'tab');
-            button.setAttribute('data-bs-target', `#day${index + 1}`);
-            button.setAttribute('type', 'button');
-            button.setAttribute('role', 'tab');
-            button.setAttribute('aria-controls', `day${index + 1}`);
-            button.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
-            button.innerText = `${day}`;
-            button.addEventListener('click', () => {
-                // Remove active class from all tab-panes
-                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
-                // Add active class to the selected tab-pane
-                document.getElementById(`day${index + 1}`).classList.add('active');
-            });
-            tabButtons.appendChild(button);
+    const button = document.createElement('button');
+    button.classList.add('nav-link', 'px-4', 'text-start');
+    button.setAttribute('id', `d${index + 1}-tab`);
+    button.setAttribute('data-bs-toggle', 'tab');
+    button.setAttribute('data-bs-target', `#day${index + 1}`);
+    button.setAttribute('type', 'button');
+    button.setAttribute('role', 'tab');
+    button.setAttribute('aria-controls', `day${index + 1}`);
+    button.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
+    button.innerText = `${day}`;
+    button.addEventListener('click', () => {
+        // Remove active class from all tab-panes
+        document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+        // Add active class to the selected tab-pane
+        const selectedPane = document.getElementById(`day${index + 1}`);
+        selectedPane.classList.add('active');
+        // Scroll to the selected tab-pane
+        selectedPane.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll
+    });
+    tabButtons.appendChild(button);
 
             // Sort events by time
             const events = data[day].sort((a, b) => {
