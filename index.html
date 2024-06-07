@@ -212,75 +212,85 @@
     
     <script>
  // Fetch JSON data
- fetch('events.json')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            const days = Object.keys(data);
-            const tabButtons = document.getElementById('myTab');
-            const tabContent = document.getElementById('myTabContent');
+ document.addEventListener("DOMContentLoaded", function() {
+    // Your JavaScript code here
+    fetch('events.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        const days = Object.keys(data);
+        const tabButtons = document.getElementById('myTab');
+        const tabContent = document.getElementById('myTabContent');
 
-            // Generate buttons for each day
-            days.forEach((day, index) => {
-                const button = document.createElement('button');
-                button.classList.add('nav-link', 'px-4', 'text-start');
-                button.setAttribute('id', `d${index + 1}-tab`);
-                button.setAttribute('data-bs-toggle', 'tab');
-                button.setAttribute('data-bs-target', `#day${index + 1}`);
-                button.setAttribute('type', 'button');
-                button.setAttribute('role', 'tab');
-                button.setAttribute('aria-controls', `day${index + 1}`);
-                button.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
-                button.innerText = `${day}`;
-                button.addEventListener('click', () => {
-                    // Remove active class from all tab-panes
-                    document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
-                    // Add active class to the selected tab-pane
-                    document.getElementById(`day${index + 1}`).classList.add('active');
-                });
-                tabButtons.appendChild(button);
+        // Generate buttons for each day
+        days.forEach((day, index) => {
+            const button = document.createElement('button');
+            button.classList.add('nav-link', 'px-4', 'text-start');
+            button.setAttribute('id', `d${index + 1}-tab`);
+            button.setAttribute('data-bs-toggle', 'tab');
+            button.setAttribute('data-bs-target', `#day${index + 1}`);
+            button.setAttribute('type', 'button');
+            button.setAttribute('role', 'tab');
+            button.setAttribute('aria-controls', `day${index + 1}`);
+            button.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
+            button.innerText = `${day}`;
+            button.addEventListener('click', () => {
+                // Remove active class from all tab-panes
+                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+                // Add active class to the selected tab-pane
+                document.getElementById(`day${index + 1}`).classList.add('active');
+            });
+            tabButtons.appendChild(button);
 
-                // Generate tab content for each day
-                const tabPane = document.createElement('div');
-                tabPane.classList.add('tab-pane', 'fade');
-                if (index === 0) {
-                    tabPane.classList.add('active');
-                }
-                tabPane.setAttribute('id', `day${index + 1}`);
-                tabPane.setAttribute('role', 'tabpanel');
-                tabPane.setAttribute('aria-labelledby', `d${index + 1}-tab`);
-
-                const events = data[day];
-                const eventList = document.createElement('ul');
-                eventList.classList.add('pt-4', 'list-unstyled', 'mb-0');
-                events.forEach(event => {
-                    const eventItem = document.createElement('li');
-                    eventItem.classList.add('event-item');
-                    // Generate event details
-                    eventItem.innerHTML = `
-                        <span class="event-time flex-shrink-0 width-13x me-md-4 d-block mb-3 mb-md-0 small text-muted">${event.time}</span>
-                        <div class="event-details border-start border-3">
-                            <h4>${event.title}</h4>
-                            ${event.location ? `<span class="flex-shrink-0 width-13x me-md-4 d-block mb-3 mb-md-0 text-muted">${event.location}</span>` : ''}
-                            <p class="mb-0">${event.description}</p>
-                        </div>
-                        ${event.image ? `<a href="${event.url}"><img class="event-image" src="${event.image}" alt="Event Image"></a>` : ''}
-                    `;
-                    eventList.appendChild(eventItem);
-                });
-                tabPane.appendChild(eventList);
-                tabContent.appendChild(tabPane);
+            // Sort events by time
+            const events = data[day].sort((a, b) => {
+                const timeA = a.time.split(':').map(Number);
+                const timeB = b.time.split(':').map(Number);
+                return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
             });
 
-            // Ensure only the first tab is active at the start
-            document.querySelectorAll('.tab-pane').forEach((pane, index) => {
-                if (index !== 0) {
-                    pane.classList.remove('active');
-                }
-            });
-        })
-        .catch(error => console.error('Error fetching events:', error));
+            // Generate tab content for each day
+            const tabPane = document.createElement('div');
+            tabPane.classList.add('tab-pane', 'fade');
+            if (index === 0) {
+                tabPane.classList.add('active');
+            }
+            tabPane.setAttribute('id', `day${index + 1}`);
+            tabPane.setAttribute('role', 'tabpanel');
+            tabPane.setAttribute('aria-labelledby', `d${index + 1}-tab`);
 
+            const eventList = document.createElement('ul');
+            eventList.classList.add('pt-4', 'list-unstyled', 'mb-0');
+            events.forEach(event => {
+                const eventItem = document.createElement('li');
+                eventItem.classList.add('event-item');
+                // Generate event details
+                eventItem.innerHTML = `
+                    <span class="event-time flex-shrink-0 width-13x me-md-4 d-block mb-3 mb-md-0 small text-muted">${event.time}</span>
+                    <div class="event-details border-start border-3">
+                        <h4>${event.title}</h4>
+                        ${event.location ? `<span class="flex-shrink-0 width-13x me-md-4 d-block mb-3 mb-md-0 text-muted">${event.location}</span>` : ''}
+                        <p class="mb-0">${event.description}</p>
+                    </div>
+                    ${event.image ? `<a href="${event.url}"><img class="event-image" src="${event.image}" alt="Event Image"></a>` : ''}
+                `;
+                eventList.appendChild(eventItem);
+            });
+            tabPane.appendChild(eventList);
+            tabContent.appendChild(tabPane);
+        });
+
+        // Ensure only the first tab is active at the start
+        document.querySelectorAll('.tab-pane').forEach((pane, index) => {
+            if (index !== 0) {
+                pane.classList.remove('active');
+            } else {
+                pane.classList.add('active');
+            }
+        });
+    })
+    .catch(error => console.error('Error fetching events:', error));
+});
     </script>
 
       <!-- End MY Schedule Section -->
