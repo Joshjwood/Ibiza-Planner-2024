@@ -241,7 +241,9 @@
         const selectedPane = document.getElementById(`day${index + 1}`);
         selectedPane.classList.add('active');
         // Scroll to the selected tab-pane
-        selectedPane.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll
+        const yOffset = -100; // Adjust the offset value as needed
+        const y = selectedPane.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
     });
     tabButtons.appendChild(button);
 
