@@ -50,7 +50,36 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    .tab-pane {
+        display: none;
+    }
 
+    .tab-pane.active {
+        display: block;
+    }
+
+    .event-item {
+        display: flex;
+        align-items: flex-start; /* Align items at the start (top) */
+        padding-bottom: 1rem; /* Add space between events */
+    }
+
+    .event-details {
+        flex: 1;
+        padding-left: 1rem; /* Space between text and image */
+    }
+
+    .event-image {
+        max-width: 150px; /* Adjust as necessary */
+        max-height: 150px; /* Adjust as necessary */
+    }
+
+    .event-time {
+            max-width: 35px; /* Adjust as necessary */
+            word-break: break-word;
+        }
+</style>
   </head>
 
   <body>
@@ -106,7 +135,7 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero">
-      <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <div class="hero-container" data-aos="zoom-in" data-aos-delay="20">
         <h1 class="mb-4 pb-0">
           The Classic<br /><span>party</span> Holiday
         </h1>
@@ -182,72 +211,75 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
     <script>
-// Fetch JSON data
-fetch('events.json')
-.then(response => response.json())
-.then(data => {
-    console.log(data);
-    const days = Object.keys(data);
-    const tabButtons = document.getElementById('myTab');
-    const tabContent = document.getElementById('myTabContent');
+ // Fetch JSON data
+ fetch('events.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            const days = Object.keys(data);
+            const tabButtons = document.getElementById('myTab');
+            const tabContent = document.getElementById('myTabContent');
 
-    // Generate buttons for each day
-    days.forEach((day, index) => {
-        const button = document.createElement('button');
-        button.classList.add('nav-link', 'px-4', 'text-start');
-        button.setAttribute('id', `d${index + 1}-tab`);
-        button.setAttribute('data-bs-toggle', 'tab');
-        button.setAttribute('data-bs-target', `#day${index + 1}`);
-        button.setAttribute('type', 'button');
-        button.setAttribute('role', 'tab');
-        button.setAttribute('aria-controls', `day${index + 1}`);
-        button.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
-        button.innerText = `${day}`;
-        button.addEventListener('click', () => {
-            // Remove active class from all tab-panes
-            document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
-            // Add active class to the selected tab-pane
-            const activePane = document.getElementById(`day${index + 1}`);
-            activePane.classList.add('active');
-            // Scroll to the active tab-pane
-            activePane.scrollIntoView({ behavior: 'smooth' });
-        });
-        tabButtons.appendChild(button);
+            // Generate buttons for each day
+            days.forEach((day, index) => {
+                const button = document.createElement('button');
+                button.classList.add('nav-link', 'px-4', 'text-start');
+                button.setAttribute('id', `d${index + 1}-tab`);
+                button.setAttribute('data-bs-toggle', 'tab');
+                button.setAttribute('data-bs-target', `#day${index + 1}`);
+                button.setAttribute('type', 'button');
+                button.setAttribute('role', 'tab');
+                button.setAttribute('aria-controls', `day${index + 1}`);
+                button.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
+                button.innerText = `${day}`;
+                button.addEventListener('click', () => {
+                    // Remove active class from all tab-panes
+                    document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+                    // Add active class to the selected tab-pane
+                    document.getElementById(`day${index + 1}`).classList.add('active');
+                });
+                tabButtons.appendChild(button);
 
-        // Generate tab content for each day
-        const tabPane = document.createElement('div');
-        tabPane.classList.add('tab-pane', 'fade');
-        // if (index === 0) {
-        //     tabPane.classList.add('active');
-        // }
-        tabPane.setAttribute('id', `day${index + 1}`);
-        tabPane.setAttribute('role', 'tabpanel');
-        tabPane.setAttribute('aria-labelledby', `d${index + 1}-tab`);
+                // Generate tab content for each day
+                const tabPane = document.createElement('div');
+                tabPane.classList.add('tab-pane', 'fade');
+                if (index === 0) {
+                    tabPane.classList.add('active');
+                }
+                tabPane.setAttribute('id', `day${index + 1}`);
+                tabPane.setAttribute('role', 'tabpanel');
+                tabPane.setAttribute('aria-labelledby', `d${index + 1}-tab`);
 
-        const events = data[day];
-        const eventList = document.createElement('ul');
-        eventList.classList.add('pt-4', 'list-unstyled', 'mb-0');
-        events.forEach(event => {
-            const eventItem = document.createElement('li');
-            // Generate event details
-            eventItem.innerHTML = `
-                <span class="flex-shrink-0 width-13x me-md-4 d-block mb-3 mb-md-0 small text-muted">${event.time}</span>
-                <div class="flex-grow-1 ps-4 border-start border-3">
-                    <h4>${event.title}</h4>
-                    ${event.location ? `<span class="flex-shrink-0 width-13x me-md-4 d-block mb-3 mb-md-0 text-muted">${event.location}</span>` : ''}
-                    <p class="mb-0">${event.description}</p>
-                    ${event.image ? `<a href="${event.url}"><img src="${event.image}" alt="Event Image"></a>` : ''}
-                    <br><br>
-                </div>
-            `;
-            eventList.appendChild(eventItem);
-        });
-        tabPane.appendChild(eventList);
-        tabContent.appendChild(tabPane);
-    });
+                const events = data[day];
+                const eventList = document.createElement('ul');
+                eventList.classList.add('pt-4', 'list-unstyled', 'mb-0');
+                events.forEach(event => {
+                    const eventItem = document.createElement('li');
+                    eventItem.classList.add('event-item');
+                    // Generate event details
+                    eventItem.innerHTML = `
+                        <span class="event-time flex-shrink-0 width-13x me-md-4 d-block mb-3 mb-md-0 small text-muted">${event.time}</span>
+                        <div class="event-details border-start border-3">
+                            <h4>${event.title}</h4>
+                            ${event.location ? `<span class="flex-shrink-0 width-13x me-md-4 d-block mb-3 mb-md-0 text-muted">${event.location}</span>` : ''}
+                            <p class="mb-0">${event.description}</p>
+                        </div>
+                        ${event.image ? `<a href="${event.url}"><img class="event-image" src="${event.image}" alt="Event Image"></a>` : ''}
+                    `;
+                    eventList.appendChild(eventItem);
+                });
+                tabPane.appendChild(eventList);
+                tabContent.appendChild(tabPane);
+            });
 
-})
-.catch(error => console.error('Error fetching events:', error));
+            // Ensure only the first tab is active at the start
+            document.querySelectorAll('.tab-pane').forEach((pane, index) => {
+                if (index !== 0) {
+                    pane.classList.remove('active');
+                }
+            });
+        })
+        .catch(error => console.error('Error fetching events:', error));
 
     </script>
 

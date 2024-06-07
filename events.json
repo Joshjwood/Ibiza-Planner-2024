@@ -1,12 +1,12 @@
 {
   "Day 1 - Sunday 7th July": [
     {
-      "time": "Arrival - 09:35",
+      "time": "09:35",
       "title": "Land at IBZ and collect rental cars",
       "description": "After baggage claim Slands and Josh pick cars up from ClickRent. Rest of gang better off waiting at the airport as the mini-bus is small and the airport is air-conditioned. We'll swing back and collect you at a pre-arranged point once we've got it. Do not forget to pre-arrange a point (again). Half an hour for passport control and bags, maybe an hour for rental collection. Should be on the road by 11am."
     },
     {
-      "time": "16:00 check-in",
+      "time": "16:00",
       "title": "Villa keys & hunter-gathering",
       "description": "Check in is at 4pm, ideally we ask and they let us check in at midday. Find our way to the villa, put our shit down, take a bit of a break, arrange some kind of supermarket trip and a trip for party supplies. Worst case we do all the other stuff first, then check in at 4pm."
     },
@@ -64,7 +64,7 @@
     {
       "location": "Eden",
       "title": "Worried About Henry",
-      "time": "from23:59",
+      "time": "23:59",
       "description": "Hybrid Minds (with MC Tempza), Special guest TBA, Skepsis, Charlotte Plank, Natty Lou, 50€ General Admission",
       "image": "assets/img/clubs/eden.jpg",
       "url": "https://www.ibiza-spotlight.com/night/promoters/worried-about-henry"
@@ -90,7 +90,7 @@
     {
       "location": "Hi Ibiza",
       "title": "The Martinez Brothers",
-      "time": "from23:30 - 07:00",
+      "time": "23:30 - 07:00",
       "description": "The Martinez Brothers, Skepta (DJ set), Jesse Calosso B2B Jean Pierre, Paco Osuna, Mahony, Wheats, Ticket Price: 60€ General Admission",
       "image": "assets/img/clubs/Hi.png",
       "url": "https://www.ibiza-spotlight.com/night/promoters/martinez-brothers"
@@ -98,7 +98,7 @@
     {
       "location": "Amnesia",
       "title": "The Masquerade by Claptone",
-      "time": "from23:00",
+      "time": "23:00",
       "description": "Claptone B2B Mambo Brothers, Hannah Wants B2B Paul Woolford, Tom & Collins, Holly Hutch, Ticket Price: 90€ Balcony Access Ticket, 60€ General Admission",
       "image": "assets/img/clubs/amnesia.jpg",
       "url": "https://www.ibiza-spotlight.com/night/promoters/masquerade-amnesia"
@@ -106,7 +106,7 @@
     {
       "location": "Pacha",
       "title": "CAMELPHAT",
-      "time": "from23:59 - 06:00",
+      "time": "23:59 - 06:00",
       "description": "CAMELPHAT, Mind Against, Sideral, Ticket Price: 50€ General Admission, 125€ Dinner at Pacha Restaurant + Entrance (min. 2 people)",
       "image": "assets/img/clubs/pacha.png",
       "url": "https://www.ibiza-spotlight.com/night/promoters/camelphat-pacha"
@@ -114,7 +114,7 @@
     {
       "location": "Ushuaïa",
       "title": "Defected",
-      "time": "from15:00 - 23:00",
+      "time": "15:00 - 23:00",
       "description": "Masters At Work (Louie Vega & Kenny Dope), Floorplan, Eliza Rose, Low Steppa, Arielle Free, Amine Edge, Alex Mills, Ticket Price: 40€ Early Entry Ticket before 17:00, 50€ Early Entry Ticket before 19:00, 60€ General Admission",
       "image": "assets/img/clubs/ushuaia.jpeg",
       "url": "https://www.ibiza-spotlight.com/night/promoters/defected-ushuaia"
@@ -122,7 +122,7 @@
     {
       "location": "O Beach Ibiza",
       "title": "Kisstory",
-      "time": "from13:00 - 23:00",
+      "time": "13:00 - 23:00",
       "description": "DJ Cameo, Grant Collins, Sam Dungate",
       "image": "assets/img/clubs/obeach.bmp",
       "url": "https://www.ibiza-spotlight.com/night/promoters/kisstory-o-beach"
@@ -130,7 +130,7 @@
     {
       "location": "Cova Santa",
       "title": "Do Not Sleep",
-      "time": "from19:00 - 05:00",
+      "time": "19:00 - 05:00",
       "description": "Line-up TBA, Ticket Price: 27€ Before 21:00, 37€ General access",
       "image": "assets/img/clubs/covasanta.jpg",
       "url": "https://www.ibiza-spotlight.com/night/promoters/amnesia-presents-cova-santa"
@@ -214,7 +214,7 @@
     {
       "location": "Eden",
       "title": "SHINE Ibiza",
-      "time": "from23:59",
+      "time": "23:59",
       "description": "Paul van Dyk, Jordan Suckley, Solarstone, 40€ 2nd Release",
       "image": "assets/img/clubs/eden.jpg",
       "url": "https://www.ibiza-spotlight.com/night/promoters/shine-ibiza-eden"
@@ -297,7 +297,7 @@
     {
       "location": "Eden",
       "title": "Space at Eden",
-      "time": "from23:59",
+      "time": "23:59",
       "description": "Armand Van Helden, Joe Vanditti, Rampini, Saraga, Aniurka, Clara Da Costa, DJ Theia, Hito, Marta Loe, 50€ Early Bird Ticket",
       "image": "assets/img/clubs/eden.jpg",
       "url": "https://www.ibiza-spotlight.com/night/promoters/space-eden"
@@ -373,7 +373,7 @@
     {
       "location": "Pacha",
       "title": "Solomun +1",
-      "time": "from23:59 - 06:00",
+      "time": "23:59 - 06:00",
       "description": "Solomun, Âme (DJ set), 70€ General Admission, 140€ Dinner at Pacha Restaurant + Entrance(min. 4 people)",
       "image": "assets/img/clubs/pacha.png",
       "url": "https://www.ibiza-spotlight.com/night/promoters/solomun_plus1_i.htm"
@@ -381,7 +381,7 @@
     {
       "location": "Ushuaïa",
       "title": "Dom Dolla",
-      "time": "from17:00 - 23:00",
+      "time": "17:00 - 23:00",
       "description": "Dom Dolla, 50€ General Admission",
       "image": "assets/img/clubs/ushuaia.jpeg",
       "url": "EVENT URL HERE"
@@ -389,7 +389,7 @@
     {
       "location": "Ibiza Rocks Hotel",
       "title": "Ben Hemsley Pool Party",
-      "time": "from14:00 - 21:00",
+      "time": "14:00 - 21:00",
       "description": "Ben Hemsley, Faster Horses, Luvstruck, Holly Hutchinson, 45€ General Admission",
       "image": "assets/img/clubs/irocks.bmp",
       "url": "https://www.ibiza-spotlight.com/night/promoters/ben-hemsley-ibiza-rocks"
@@ -397,7 +397,7 @@
     {
       "location": "Club Chinois",
       "title": "Franky Wah presents SHÈN Ibiza",
-      "time": "from23:45 - 06:00",
+      "time": "23:45 - 06:00",
       "description": "Franky Wah, Nora En Pure, Rebūke, Trutopia, 40€ General Admission",
       "image": "assets/img/clubs/chinois.jpg",
       "url": "https://www.ibiza-spotlight.com/night/promoters/franky-wah-presents-shen"
@@ -405,7 +405,7 @@
     {
       "location": "Las Dalias - Akasha",
       "title": "Nido",
-      "time": "from19:00",
+      "time": "19:00",
       "description": "Line-up TBA, Line-up TBA, 15€ General Admission",
       "image": "assets/img/clubs/akasha.jpg",
       "url": "https://www.ibiza-spotlight.com/night/promoters/nido"
@@ -413,7 +413,7 @@
     {
       "location": "Cova Santa",
       "title": "Woomoon",
-      "time": "from19:00 - 06:00",
+      "time": "19:00 - 06:00",
       "description": "Pablo Fierro, Wanduta, Mimi Love, Share, Emanuel Satie, Aigua & House of Frequency, 32€ Early Bird Ticket 12 tickets remaining, 32€ Club ticket (access from 11pm), 43€ General access, 108€ Premium ticket",
       "image": "assets/img/clubs/covasanta.jpg",
       "url": "https://www.ibiza-spotlight.com/night/promoters/woomoon"
@@ -497,9 +497,9 @@
   ],
   "Day 11 - Wednesday 17th July": [
     {
-      "time": "4:30 PM (Penalty charge for drop off after 5:30)",
+      "time": "4:30 PM",
       "title": "Drop off hire cars",
-      "description": "Drop off hire cars, make sure they're fueled just before drop off"
+      "description": "Drop off hire cars, make sure they're fueled just before drop off, penalty charge for drop off after 5:30."
     },
     {
       "time": "19:30 PM",
