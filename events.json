@@ -529,13 +529,13 @@
   ],
   "Day 11 - Wednesday 17th July": [
     {
-      "time": "10:00 AM",
+      "time": "4:30 PM (Penalty charge for drop off after 5:30)",
       "title": "Drop off hire cars",
-      "description": "Description of Event 3"
+      "description": "Drop off hire cars, make sure they're fueled just before drop off"
     },
     {
-      "time": "2:00 PM",
-      "title": "Departure",
+      "time": "19:30 PM",
+      "title": "Flight departure",
       "description": "Description of Event 4"
     }
   ]
