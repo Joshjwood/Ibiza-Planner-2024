@@ -215,7 +215,10 @@ fetch('events.json')
             // Remove active class from all tab-panes
             document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
             // Add active class to the selected tab-pane
-            document.getElementById(`day${index + 1}`).classList.add('active');
+            const activePane = document.getElementById(`day${index + 1}`);
+            activePane.classList.add('active');
+            // Scroll to the active tab-pane
+            activePane.scrollIntoView({ behavior: 'smooth' });
         });
         tabButtons.appendChild(button);
 
