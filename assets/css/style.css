@@ -888,6 +888,11 @@ h6 {
 
 #schedule .tab-pane {
   transition: ease-in-out 0.2s;
+  display: none;
+}
+
+#schedule .tab-pane.active {
+  display: block;
 }
 
 #schedule .schedule-item {

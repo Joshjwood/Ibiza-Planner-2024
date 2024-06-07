@@ -50,15 +50,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  <style>
-    .tab-pane {
-      display: none;
-    }
-  
-    .tab-pane.active {
-      display: block;
-    }
-  </style>
+
   </head>
 
   <body>
@@ -225,9 +217,9 @@ fetch('events.json')
         // Generate tab content for each day
         const tabPane = document.createElement('div');
         tabPane.classList.add('tab-pane', 'fade');
-        if (index === 0) {
-            tabPane.classList.add('active');
-        }
+        // if (index === 0) {
+        //     tabPane.classList.add('active');
+        // }
         tabPane.setAttribute('id', `day${index + 1}`);
         tabPane.setAttribute('role', 'tabpanel');
         tabPane.setAttribute('aria-labelledby', `d${index + 1}-tab`);
